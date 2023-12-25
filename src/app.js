@@ -13,10 +13,8 @@ app.use(express.urlencoded({extended:true, limit:true})) //to handle url data an
 app.use(express.static("public"));  //to handle static files on server side like we keep here in public dir
 app.use(cookieParser()) //to handle cookies 
 
-
 //routes import
 import userRouter from './routes/user.routes.js'
-
 
 //routes declaration
 app.use("/api/v1/users", userRouter)
